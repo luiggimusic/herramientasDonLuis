@@ -1,0 +1,521 @@
+/*
+  Nombre: Luis Arnaldo Palma
+  Fecha: 01/12/2023
+  Módulo: Lenguajes de marcas y sistemas de gestión de información
+    - UD2 Desarrollo web con HTML5 y CSS3 (20%)
+    - LMSGI02 Tarea evaluativa 2. Sitio web (80%)
+
+  Enlace a Autoevaluación:
+
+  Enlace a vídeo de autoevaluación
+  Descripcion de la tarea:  
+*/
+:root {
+    /* Funcionalidad innovadora */
+    /* El root se utiliza para declarar variables dentro del CSS, luego se pueden usar llamando a var(--xxxxxx) y completando con el nombre de la variable */
+    --paleta-a: #ff5400;
+    --paleta-b: #252422;
+    --paleta-c: #403d39;
+    --paleta-d: #ccc5b9;
+    --paleta-e: #f2efef;
+    --paleta-f: #ffffff;
+    --fuente-principal: 'Hind Madurai', sans-serif;
+    --box-shadow-general: -5px 5px 6px -3px rgba(224, 224, 224, 1);
+    /* Las variables usualmente se declaran de esta manera('--'+nombre de variable) y los espacios se remplazan por '-'*/
+}
+
+body {
+    text-align: center;
+
+    /* Uso de variables declaradas en el root, sucederá a lo largo de todo el CSS */
+    font-family: var(--fuente-principal);
+    background: var(--paleta-e);
+}
+
+h2 {
+    width: 100%;
+    color: var(--paleta-b);
+    margin-bottom: 2rem;
+}
+
+header,
+footer {
+    display: flex;
+    color: #fff;
+    background: var(--paleta-a);
+}
+
+header {
+    position: relative;
+    font-family: 'Source Serif 4', serif;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    /* Funcionalidad innovadora: position: sticky */
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+#logo {
+    position: absolute;
+    margin: -2.2rem 0 .5rem 5rem;
+    height: 6.5rem;
+}
+
+#nombre_tienda {
+    margin-left: 15rem;
+}
+
+.pedido_cuenta {
+    display: flex;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+.pedido_cuenta p {
+    margin: 0 1rem 0 .5rem;
+    font-family: var(--fuente-principal);
+}
+
+nav {
+    width: 100%;
+    font-family: var(--fuente-principal);
+    font-weight: bold;
+    background: var(--paleta-c);
+    border-top: var(--paleta-f) 2px solid;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    text-transform: uppercase;
+    padding: .5rem 4rem;
+
+    /* Funcionalidad innovadora: transition: all .2s ease-out; se aplicarán "todas" las transiciones, que se definan en el "hover", al pasar 
+    el ratón sobre los elementos, en un tiempo de 0,2 segundos y con ease-out, dándole un movimiento 
+    suave sobre el final de la transición. */
+    transition: all .2s ease-out;
+}
+
+nav ul li:hover {
+    /* Aquí se definen las transiciones en los tiempos establecidos en el elemento original */
+    background: var(--paleta-a);
+    transform: scale(1.1, 1);
+}
+
+nav ul li a {
+    color: var(--paleta-f);
+    text-decoration: none;
+}
+
+.pagina_seleccionada {
+    background-color: var(--paleta-a);
+}
+
+main {
+    margin: auto;
+    width: 70%;
+}
+
+.banner_pintura img {
+    width: 100%;
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow-general);
+}
+
+.oferta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    align-items: center;
+    box-shadow: var(--box-shadow-general);
+    margin-bottom: 3rem;
+}
+
+.caja_parrafo_oferta {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.parrafo_oferta {
+    width: 20rem;
+}
+
+.span_oferta {
+    font-size: 3rem;
+    background-color: red;
+    color: #fff;
+    line-height: 3.3rem;
+}
+
+.oferta img {
+    width: 70%;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    line-height: 1rem;
+    height: 3rem;
+    font-size: .7rem;
+}
+
+footer a {
+    font-style: italic;
+    font-size: .8em;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer_fijo {
+    /* He optado por fijar el footer en páginas que no son los suficientemente extensas para
+    que éste se vea al final de la página y no en cualquier otro sitio de la pantalla. */
+    position: fixed;
+    bottom: 0;
+}
+
+/* Categorías */
+.box_categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.box_categorias a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20rem;
+    height: 6rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--paleta-f);
+    background: var(--paleta-a);
+    border-radius: 7px;
+    margin-bottom: 1rem;
+    transition: all .4s ease-out;
+}
+
+.box_categorias a:hover {
+    background: var(--paleta-b);
+    transform: scale(1.02, 1.02);
+    box-shadow: var(--box-shadow-general);
+}
+
+.categorias_lista {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    position: fixed;
+    padding: .5rem;
+    margin-left: -3rem;
+    margin-top: 1.5rem;
+}
+
+.categorias_lista li {
+    background: var(--paleta-a);
+    color: var(--paleta-f);
+    width: 12rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 7px;
+    transition: all, .3s ease-in-out;
+}
+
+.categorias_lista li:hover {
+    transform: translate(15px, 0px);
+    box-shadow: var(--box-shadow-general);
+}
+
+.categorias_lista li a {
+    color: var(--paleta-f);
+    text-decoration: none;
+}
+
+#categoria_seleccionada {
+    background: var(--paleta-c);
+}
+
+/* Productos */
+.lista_productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 13rem;
+    justify-content: space-evenly;
+    border-left: var(--paleta-d) solid 1px;
+    margin-bottom: 3rem;
+}
+
+.lista_productos a {
+    text-decoration: none;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    background: var(--paleta-f);
+    border-radius: 7px;
+    width: 12rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color: var(--paleta-c);
+    border-bottom: var(--paleta-a) solid 1px;
+    padding: 0 1rem;
+    transition: all .2s ease-in-out;
+}
+
+.producto:hover {
+    box-shadow: var(--box-shadow-general);
+    transform: scale(1.01, 1.01);
+}
+
+.contenedor_imagen {
+    display: flex;
+    width: 100%;
+    height: 14rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto img {
+    width: 90%;
+}
+
+.detalles_producto {
+    height: 10rem;
+}
+
+.precio_producto {
+    border-top: var(--paleta-e) solid 1px;
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.iva {
+    display: block;
+    font-size: .8rem;
+    font-weight: lighter;
+}
+
+.nombre_producto {
+    font-size: .9rem;
+}
+
+.detalle_producto {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0 2rem 13rem;
+    padding: 1rem 0;
+    justify-content: space-around;
+    background: var(--paleta-f);
+    border-radius: 7px;
+}
+
+.detalle_producto_imagen {
+    width: 40%;
+}
+
+.contenedor_nombre_precio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding-left: 4rem;
+    padding-right: 2rem;
+    border-left: var(--paleta-e) solid 1px;
+}
+
+.detalle_producto_nombre {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.detalle_producto_precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.bttn_anadir {
+    background: var(--paleta-b);
+    color: var(--paleta-f);
+    padding: .5rem;
+    border-radius: 7px;
+    width: 70%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all .2s ease-out;
+}
+
+.bttn_anadir:hover {
+    transform: scale(1.01, 1.01);
+    box-shadow: var(--box-shadow-general);
+}
+
+.detalles_bold {
+    font-weight: bold;
+}
+
+.detalle_producto_descripcion {
+    margin-left: 1rem;
+    padding: 1rem 3rem 0 1rem; 
+    line-height: 2rem;
+    text-align: start;
+    border-top: var(--paleta-e) solid 1px;
+}
+
+.detalle_producto_titulo {
+    font-size: 2rem;
+}
+
+/* Noticias */
+.lista_noticias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+.noticia {
+    position: relative;
+    width: 28%;
+    background: var(--paleta-f);
+    padding-bottom: 3rem;
+    margin: 1rem;
+}
+
+.noticia_titulo,
+.noticia p {
+    text-align: left;
+    line-height: 1.7rem;
+    padding: 0 1.5rem 0 2rem;
+}
+
+.noticia_titulo {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.noticia img {
+    width: 100%;
+}
+
+.noticia_fecha {
+    line-height: .5rem;
+    font-size: .8rem;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.noticia_seguir_leyendo {
+    position: absolute;
+    text-decoration: none;
+    background: var(--paleta-c);
+    color: var(--paleta-f);
+    padding: .6rem 2rem;
+    border-radius: 7px;
+    bottom: 1rem;
+    right: 1rem;
+    transition: all .2s ease-out;
+}
+
+.noticia_seguir_leyendo:hover,
+#contacto_enviar:hover {
+    background: var(--paleta-a);
+    transform: scale(1.01, 1.01);
+}
+
+/* Contacto */
+.contacto {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contacto_formulario,
+.contacto_datos_tienda {
+    display: flex;
+    flex-direction: column;
+    width: 28rem;
+    background-color: var(--paleta-f);
+    border-radius: 7px;
+    margin-bottom: 4rem;
+}
+
+.contacto_formulario {
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.contacto_formulario label,
+.contacto_formulario input,
+.contacto_formulario select,
+.contacto_formulario textarea {
+    width: 70%;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: .5rem;
+}
+
+.contacto_formulario input,
+.contacto_formulario select,
+.contacto_formulario textarea {
+    background: var(--paleta-e);
+}
+
+.contacto_formulario label {
+    margin-top: .5rem;
+    text-align: left;
+}
+
+.contacto_formulario input,
+select {
+    height: 2rem;
+}
+
+#contacto_enviar {
+    background: var(--paleta-b);
+    color: var(--paleta-f);
+    margin-top: 1rem;
+    height: 3rem;
+    transition: all .2s ease-out;
+}
+
+.contacto_datos_tienda {
+    height: 100%;
+}
+
+.contacto_datos_tienda p {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 1.5rem;
+}
+
+.contacto_datos_tienda img {
+    width: 1.5rem;
+    margin-right: 1rem;
+}
+
+.logos {
+    display: flex;
+    justify-content: flex-start;
+}

@@ -1,0 +1,90 @@
+<!--
+  Nombre: Luis Arnaldo Palma
+  Fecha: 01/12/2023
+  Módulo: Lenguajes de marcas y sistemas de gestión de información
+    - UD2 Desarrollo web con HTML5 y CSS3 (20%)
+    - LMSGI02 Tarea evaluativa 2. Sitio web (80%)
+
+  Enlace a Autoevaluación:
+
+  Enlace a vídeo de autoevaluación
+  Descripcion de la tarea:  
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="herramientas_don_luis" content="">
+    <title>Don Luis - Iluminación</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="/img/logo.png"> <!-- Este icono aparecerá en la pestaña del navegador -->
+</head>
+
+<body>
+    <header>
+        <!-- <a href="https://www.freepik.es/vector-gratis/conjunto-iconos-planos-diferentes-manitas-logo-insignias-servicio-vintage-negras-llave-martillo-coleccion-ilustracion-vector-trabajador-mecanico-construccion-mantenimiento_10172614.htm#query=logotipo%20de%20herramientas&position=0&from_view=keyword&track=ais&uuid=bc8e37a0-f1e4-40e9-b887-af390c1cca93">Imagen de pch.vector</a> en Freepik -->
+        <a href="index.html"><img id="logo" src="img/logo.png" alt="logo"></a>
+        <h1 id="nombre_tienda">HERRAMIENTAS DON LUIS</h1>
+        <div class="pedido_cuenta">
+            <img src="img/cuenta.svg" alt="carrito_compra">
+            <p>Cuenta</p>
+            <img src="img/carrito-compra.svg" alt="carrito_compra">
+            <p>Pedido</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="pagina_seleccionada"><a href="categorias.html">Categorías</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="categorias">
+        <aside>
+            <ul class="categorias_lista">
+                <li><a href="electricidad.html">Electricidad</a></li>
+                <li><a href="fontaneria.html">Fontanería</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li id="categoria_seleccionada"><a href="iluminacion.html">Iluminación</a></li>
+                <li><a href="pinturas.html">Pinturas</a></li>
+            </ul>
+        </aside>
+        <section class="lista_productos">
+            <h2>Iluminación</h2>
+            <a href="#">
+                <article class="producto">
+                    <div class="contenedor_imagen">
+                        <img src="img/bombilla.jpeg" alt="bombilla">
+                    </div>
+                    <div class="detalles_producto">
+                        <p class="precio_producto">2,20€ <span class="iva">IVA incluido</span></p>
+                        <p class="nombre_producto">Bombilla led estándar E27 872lm 8W luz fría</p>
+                    </div>
+                </article>
+            </a>
+            <a href="#">
+                <article class="producto">
+                    <div class="contenedor_imagen">
+                        <img src="img/bombilla-led-dicroica.jpeg" alt="bombilla-led-dicroica">
+                    </div>
+                    <div class="detalles_producto">
+                        <p class="precio_producto">11,90€ <span class="iva">IVA incluido</span></p>
+                        <p class="nombre_producto">Bombilla led dicroica gu10 525lm 5W luz cálida 120º (6 uds)</p>
+                    </div>
+                </article>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <p>Autoría y licencias: Página web realizada por Luis Arnaldo Palma con fines educativos.<br>Todos los derechos
+            de las imágenes están reservados y pertenecen a sus autores. | <a
+                href="https://creativecommons.org/licenses/by/4.0/" target="_blank">creative commons attribution 4.0
+                international (CC BY 4.0)</a></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!--
+  Nombre: Luis Arnaldo Palma
+  Fecha: 01/12/2023
+  Módulo: Lenguajes de marcas y sistemas de gestión de información
+    - UD2 Desarrollo web con HTML5 y CSS3 (20%)
+    - LMSGI02 Tarea evaluativa 2. Sitio web (80%)
+
+  Enlace a Autoevaluación:
+
+  Enlace a vídeo de autoevaluación
+  Descripcion de la tarea:  
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="herramientas_don_luis" content="">
+    <title>Don Luis - Noticias</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="/img/logo.png"> <!-- Este icono aparecerá en la pestaña del navegador -->
+</head>
+
+<body>
+    <header>
+        <!-- <a href="https://www.freepik.es/vector-gratis/conjunto-iconos-planos-diferentes-manitas-logo-insignias-servicio-vintage-negras-llave-martillo-coleccion-ilustracion-vector-trabajador-mecanico-construccion-mantenimiento_10172614.htm#query=logotipo%20de%20herramientas&position=0&from_view=keyword&track=ais&uuid=bc8e37a0-f1e4-40e9-b887-af390c1cca93">Imagen de pch.vector</a> en Freepik -->
+        <a href="index.html"><img id="logo" src="img/logo.png" alt="logo"></a>
+        <h1 id="nombre_tienda">HERRAMIENTAS DON LUIS</h1>
+        <div class="pedido_cuenta">
+            <img src="img/cuenta.svg" alt="carrito_compra">
+            <p>Cuenta</p>
+            <img src="img/carrito-compra.svg" alt="carrito_compra">
+            <p>Pedido</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li class="pagina_seleccionada"><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Noticias</h2>
+    <main class="lista_noticias">
+        <section class="noticia">
+            <img src="img/noticia-1.webp" alt="noticia-1">
+            <h3 class="noticia_titulo">Astronautas de la ISS pierden una bolsa de herramientas en el espacio y un
+                telescopio logra encontrarla
+            </h3>
+            <p class="noticia_fecha">24 noviembre, 2023</p>
+            <p>Tras analizarse la trayectoria de dicha bolsa, funcionarios de la NASA han determinado que el riesgo de
+                contacto con la estación espacial es bajo y creen que no es necesario recuperarla.
+                Un telescopio robótico en Italia ha localizado en el espacio una bolsa de herramientas que astronautas
+                perdieron durante actividades en el exterior de la Estación Espacial Internacional. El objeto brillante
+                apareció en imágenes tomadas por el Proyecto del Telescopio Virtual el miércoles...</p>
+            <a class="noticia_seguir_leyendo"
+                href="https://www.cmmedia.es/noticias/castilla-la-mancha/toledo/herramientas-robadas-interior-vehiculos-toledo.html"
+                target="_blank">Seguir leyendo</a>
+        </section>
+        <section class="noticia">
+            <img src="img/noticia0.jpeg" alt="noticia0">
+            <h3 class="noticia_titulo">¿Reconoce alguna de estas herramientas? Se han recuperado tras ser robadas de
+                vehículos</h3>
+            <p class="noticia_fecha">24 noviembre, 2023</p>
+            <p>Se han localizado en los domicilios de dos presuntos autores de robos de herramientas portátiles en la
+                provincia de Toledo y otras limítrofes
+                La Guardia Civil ha detenido a dos personas de 22 y 28 años de edad como presuntos autores robos de
+                herramientas, principalmente de construcción en las provincias de Toledo, Ávila y la Comunidad de
+                Madrid.
+                Los agentes han conseguido poner fin a grupo...</p>
+            <a class="noticia_seguir_leyendo"
+                href="https://www.cmmedia.es/noticias/castilla-la-mancha/toledo/herramientas-robadas-interior-vehiculos-toledo.html"
+                target="_blank">Seguir leyendo</a>
+        </section>
+        <section class="noticia">
+            <img src="img/noticia1.jpg" alt="noticia1">
+            <h3 class="noticia_titulo">OBRAMAT abre el proceso de selección para su Almacén en Córdoba, el sexto en
+                Andalucía</h3>
+            <p class="noticia_fecha">30 noviembre, 2023</p>
+            <p>Córdoba, 30 de octubre de 2023.- OBRAMAT, la empresa retail de referencia de distribución de materiales
+                en el mercado de la Construcción y Reforma, tiene prevista su apertura en Córdoba a mediados de 2024. El
+                nuevo Almacén se encuentra ubicado en el Polígono de La Torrecilla, situado al sur de la capital, junto
+                a los...</p>
+            <a class="noticia_seguir_leyendo"
+                href="https://conoce.bricomart.es/articulos/obramat-abre-el-proceso-de-seleccion-para-su-almacen-en-cordoba-el-sexto-en-andalucia/"
+                target="_blank">Seguir leyendo</a>
+        </section>
+        <section class="noticia">
+            <img src="img/noticia2.jpg" alt="noticia1">
+            <h3 class="noticia_titulo">Este taladro percutor Black+Decker incluye 32 accesorios y un maletín</h3>
+            <p class="noticia_fecha">19 noviembre, 2023</p>
+            <p>La herramienta acumula más de 8.000 valoraciones positivas de los clientes de Amazon.Y tú, ¿también eres
+                un aficionado al bricolaje? Si como manitas tienes en casa un gran número de piezas, sabrás que es
+                importante, no solo estar bien equipado, también disponer de un espacio donde organizarlas y
+                almacenarlas bien para que no sufran ningún tipo de desperfecto. Y para seguir completando...</p>
+            <a class="noticia_seguir_leyendo"
+                href="https://as.com/showroom/este-taladro-percutor-blackdecker-en-oferta-incluye-32-accesorios-y-un-maletin-n-2/"
+                target="_blank">Seguir leyendo</a>
+        </section>
+        <section class="noticia">
+            <img src="img/noticia3.jpg" alt="noticia1">
+            <h3 class="noticia_titulo">San Sebastián acogerá la próxima semana el Congreso Nacional de Fabricación
+                Avanzada en un buen momento
+                para el sector, que prevé facturar un 5 % más pese a la incertidumbre</h3>
+            <p class="noticia_fecha">18 noviembre, 2023</p>
+            <p>El sector español de máquina herramienta mantiene sus perspectivas positivas para 2023, cuando augura que
+                la facturación crecerá un 5 %, ya que las empresas presentan, en términos generales, un "buen nivel de
+                ocupación y carteras de pedidos suficientes" pese ...</p>
+            <a class="noticia_seguir_leyendo"
+                href="https://cadenaser.com/euskadi/2023/10/18/san-sebastian-acogera-la-proxima-semana-el-congreso-nacional-de-fabricacion-avanzada-en-un-buen-momento-para-el-sector-que-preve-facturar-un-5-mas-pese-a-la-incertidumbre-radio-san-sebastian/"
+                target="_blank">Seguir leyendo</a>
+        </section>
+    </main>
+    <footer>
+        <p>Autoría y licencias: Página web realizada por Luis Arnaldo Palma con fines educativos.<br>Todos los derechos
+            de las imágenes están reservados y pertenecen a sus autores. | <a
+                href="https://creativecommons.org/licenses/by/4.0/" target="_blank">creative commons attribution 4.0
+                international (CC BY 4.0)</a></p>
+    </footer>
+</body>
+
+</html>
